@@ -1,0 +1,19 @@
+{
+  "name": "manutd_transfer",
+  "version": "1.0.0",
+  "description": "Players Signed by Manchester United in 18/19 transfer window",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "Tim Geek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

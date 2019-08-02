@@ -1,0 +1,53 @@
+<h2> Manchester United Signed Players</h2>
+<div id = "form-control">
+<form action = '/signed' method = 'POST' autocomplete="off">
+    <div class = 'form-group'>
+        <label for = 'name'>Name: </label>
+        <input type = 'text' name = 'name' class = 'form-control'
+        placeholder = 'Enter Name' />
+    </div>
+    <div class = 'form-group'>
+        <label for = 'age'> Age: </label>
+        <input type = 'text' name = 'age' class = 'form-control'
+        placeholder = 'Enter the Age'>
+    </div>
+    <div class = 'form-group'>
+        <label for = 'position'> Position: </label>
+        <input type = 'text' name = 'position' class = 'form-control'
+         placeholder = 'Enter Players Postion'>
+
+    </div>
+    <div class = 'form-group' >
+        <button type = 'submit' class = 'btn btn-primary' id = 'button' > SIGNED UP </button>
+    </div>
+</form>
+</div>
+<hr id = 'strike-through'>
+<div id = 'display' class = 'table-responsive'>
+    <table class = 'table table-bordered'>
+        <thead class = 'thead-dark'>
+            <tr>
+                <th scope = 'col'> Player </th>
+                <th scope = 'col'> Age </th>
+                <th scope = 'col'> Position </th>
+              <!--  <th scope = 'col'>  </th> -->
+                <th scope = 'col'> # </th> 
+            </tr>
+        </thead>
+        {{#signed}}
+            <tr>
+                <td> {{name}} </td>
+                <td> {{age}} </td>
+                <td> {{position}} </td>
+               <!-- <td> 
+                <a href = '/updated/{{_id}}' class = 'btn btn-primary'
+                    id = 'button' > Edit </a>
+                </td> -->
+                <td> 
+                <a href = '/process/{{_id}}' class = 'btn btn-primary'
+                    id = 'button' > Not Signed </a> 
+                </td>
+            </tr>
+        {{/signed}}
+    </table>
+</div>
